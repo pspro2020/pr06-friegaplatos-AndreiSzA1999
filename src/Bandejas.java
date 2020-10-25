@@ -35,9 +35,10 @@ public class Bandejas {
         }
 
         bandejasecos.add(bandejalimpios.get(0));
+        TimeUnit.SECONDS.sleep(random.nextInt(3)+1);
         System.out.printf("%s => %s  Se ha secado el plato nº %d \n",LocalTime.now().format(hora),Thread.currentThread().getName(), bandejasecos.get(0).getN_serie());
         bandejalimpios.remove(0);
-        TimeUnit.SECONDS.sleep(random.nextInt(3)+1);
+
         notifyAll();
 
     }
@@ -52,9 +53,10 @@ public class Bandejas {
         }
 
         alacena.add(bandejasecos.get(0));
+        TimeUnit.SECONDS.sleep(random.nextInt(2)+1);
         System.out.printf("%s => %s Se ha añadido el plato nº %d a la alacena\n",LocalTime.now().format(hora),Thread.currentThread().getName(), bandejasecos.get(0).getN_serie());
         bandejasecos.remove(0);
-        TimeUnit.SECONDS.sleep(random.nextInt(2)+1);
+
         notifyAll();
     }
 

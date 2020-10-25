@@ -18,7 +18,7 @@ public class Fregador implements Runnable {
 
 
     @Override
-    public void run() {
+    public synchronized void run() {
 
        while (!Thread.currentThread().isInterrupted()){
 
